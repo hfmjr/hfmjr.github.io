@@ -1,0 +1,89 @@
+
+ 
+        @font-face {
+            font-family: 'urwfranklingothicw02-mediumRg';
+            src: url('urw_franklin_gothic_w02_medium-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+            background-color: black;
+            color: #fafafa;
+            font-family: 'urwfranklingothicw02-mediumRg', sans-serif;  
+            height: 100%  
+        }
+        
+        #lista {
+            padding: 0px;     /* por algum motivo havia um padding entortando o menu.    */
+            list-style-type: none; /* remove círculos ao lado das listas*/
+            margin-top: 7rem;
+            max-width: 35%;            
+            display:flex;
+            flex-direction: row;    
+            justify-content: space-around;   
+        } 
+            
+            
+        
+
+        li { 
+            cursor: pointer;            
+            text-transform: uppercase; 
+            padding: 10px; /* sem um paddin os textos grudam. não pode usar margin porque a margin pode ser clicada e não retorna o texto innerHTML*/
+            flex: 1;         /* faz os elementos li ocuparem todo espaço ul, caso contrario é possivel clicar em local que não retorna o apropriado innerHTML para a função.   */
+            text-align: center;  /* o innerHTML fica no centro do box li */
+        }
+
+        footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: red;        
+        text-align: center;
+        height: 7%;
+        font-size:small;        
+        padding: 5px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight:bolder;
+            color:#F263B2;
+            width: 50%;
+            text-align: center;
+            margin-top: 10rem;
+        }
+
+       
+
+       .inv {
+        display: none;
+       }
+
+       .imagem {        
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+       }
+
+
+       section {
+        margin-top: 5%;
+        width: 50%;
+        text-align: justify;
+       
+       }
+
+       .center {                 /* para não ter que repetir toda hora o código desse bloco ao centralizar elementos na tela*/
+        margin-left: auto;
+        margin-right: auto;
+       }
+          
+    

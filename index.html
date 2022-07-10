@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>      
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous">
+        <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
+        <link rel="stylesheet" media="screen and (min-width: 601px)" href="screen.css">
+        <title>Minha página pessoal</title>        
+    </head>
+    
+    <body>
+
+        <h1 class="center">HUETE FERREIRA MAIER JÚNIOR<sup>®</sup></h1>
+        <ul id="lista" class="center">            
+            <li>Sobre</li>
+            <li>Formação</li>
+            <li>Portfólio</li>
+            <li>Contato</li>
+        </ul>
+
+        <div class="imagem">
+            <img src="image.png" alt="uma foto minha">
+        </div>
+        
+        <section class="conteudo, center">
+            <div id="Sobre" class="inv">Sou pai de duas adolescentes, tenho 45 anos, casado há 22 anos, 
+                empresário há 18 anos atuando no ramo de atendimento veterinário e venda de produtos para animais,
+                "paitrocinador" de minhas duas filhas, que são atletas de base de judô. E, para não restar nenhum
+                tempo livre, faço faculdade de Análise e Desenvolvimento de Sistemas na modalidade EAD.</div>
+            <div id="Formação" class="inv">Bacharel em direito, advogado licenciado e, recentemente, graduando
+                em Análise e Desenvolvimento de Sistemas. Possuo boa compreensão de espanhol e inglês escrito
+                e falado.</div>
+            <div id="Portfólio" class="inv">
+                É possível verificar o código utilizado nesta página no meu <a href="https://github.com/hfmjr/hfmjr.github.io" target="_blank">github.</a>
+
+
+            </div>
+            <div id="Contato" class="inv">Se quiser me contatar segue o formuário abaixo:
+                <form>
+                    <!-- Name input -->
+                    <div class="form-outline mb-1">
+                      <input type="text" id="form4Example1" class="form-control" />
+                      <label class="form-label" for="form4Example1">Nome</label>
+                    </div>
+                  
+                    <!-- Email input -->
+                    <div class="form-outline mb-1">
+                      <input type="email" id="form4Example2" class="form-control" />
+                      <label class="form-label" for="form4Example2">Endereço de Email</label>
+                    </div>
+                  
+                    <!-- Message input -->
+                    <div class="form-outline mb-1">
+                      <textarea class="form-control" id="form4Example3" rows="3"></textarea>
+                      <label class="form-label" for="form4Example3">Mensagem</label>
+                    </div>
+                  
+                    <!-- Checkbox -->
+                    <div class="form-check d-flex justify-content-center mb-1">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked />
+                      <label class="form-check-label" for="form4Example4">
+                        Envie-me uma cópia desta mensagem.
+                      </label>
+                    </div>
+                  
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+                  </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>Esta página trata-se de um trabalho da disciplina de Ferramentas de Desenvolvimento WEB do Curso de
+                Análise e Desenvolvimento de Sistemas da Universidade <a href="https://www.uninter.com/">Uninter</a>.</p>
+            <p>Aluno: Huete Ferreira Maier Júnior. RU: 18225037 <a href="hmaierjr@gmail.com">hmaierjr@gmail.com</a></p>
+        </footer>
+        
+        <script>            
+            //Com o código abaixo cada item da lista (menu) torna a div correspondente visível. 
+            document
+                .getElementById('lista')
+                .addEventListener('click', 
+                function (e) {
+                    let vis = document.querySelector('.vis');
+                    console.log(e.target.innerHTML)                    
+                    let imagem = document.querySelector('.imagem');
+                    imagem.style.display = 'none';
+                    let alvo = document.getElementById(e.target.innerHTML);                    
+                        if (vis !== null) {
+                            vis.className = 'inv';
+                        }
+                        if (alvo !== null ) {
+                            alvo.className = 'vis';
+                        }                                        
+            });  
+        </script>
+    </body>
+</html>
