@@ -1,0 +1,87 @@
+
+/*este arquivo é bastante parecido com screen.css, muda alguma coisa no tocante a adaptação de tamanhos diferentes
+ de telas*/
+
+@font-face {
+    font-family: 'urwfranklingothicw02-mediumRg';
+    src: url('urw_franklin_gothic_w02_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-color: black;
+    color: #fafafa;
+    font-family: 'urwfranklingothicw02-mediumRg', sans-serif;  
+    height: 100%  
+}
+
+#lista {
+    padding: 0px;     
+    list-style-type: none; 
+    margin-top: 1rem;
+    max-width: 35%;            
+    display:flex;
+    flex-direction: row;    
+    justify-content: space-around;   
+} 
+
+li { 
+    cursor: pointer;            
+    text-transform: uppercase; 
+    padding: 10px; 
+    flex: 1;       
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;        
+    text-align: center;
+    height: 6rem;
+    font-size:0.7rem;        
+    padding-top: 0.8rem;
+}
+
+h1 {
+    font-size: 1.3rem;
+    font-weight:bolder;
+    color:#F263B2;
+    width: 50%;
+    text-align:center;
+    margin-top: 5rem;
+}
+
+.inv {
+    display: none;
+}
+
+.imagem {        
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    height: 15rem;
+}
+
+section {
+    margin-top: 5%;
+    width: 80%;
+    text-align:justify;
+}
+
+form {
+    font-size: 0.5rem;
+}
+
+.center {                 /* para não ter que repetir toda hora o código desse bloco ao centralizar elementos na tela*/
+    margin-left: auto;
+    margin-right: auto;
+}
