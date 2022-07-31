@@ -77,10 +77,13 @@ section {
     margin-right: auto;
 } 
 
-@media (max-height: 600px)
+/*Para a largura de tela a página recebe responsividade dos arquivos screen e smallscreen. No entanto ficou faltando 
+o ajuste para a tela de celular em landscape. 
+*/
+@media (max-height: 600px) /* Ativa quando a altura da tela for pequena, "celular deitado"*/
 {
   footer {
-    position: relative;
+    position: relative; /* A solução mais simples foi tirar o footer fixo*/
     margin-top: 3rem;
   }
 }
