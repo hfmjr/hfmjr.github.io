@@ -20,7 +20,7 @@ body {
 #lista {
     padding: 0px;     /* ajusta o menu.    */
     list-style-type: none; /* remove círculos ao lado das listas*/
-    margin-top: 7rem; 
+    margin-top: 6rem; 
     max-width: 35%;            
     display:flex;   
     flex-direction: row;  
@@ -53,7 +53,7 @@ h1 {
     color:#F263B2;
     width: 50%;
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 9rem;
 }
 
 .inv {
@@ -63,7 +63,7 @@ h1 {
 .imagem {        
     display: flex;
     justify-content: center;
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 section {
