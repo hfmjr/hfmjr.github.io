@@ -30,7 +30,8 @@ body {
 li { 
     cursor: pointer;            /* monstra um ponteiro (mãozinha) pra indicar que faz algo*/
     text-transform: uppercase; 
-    padding: 10px; /* sem um padding os textos grudam. não pode usar margin porque a margin pode ser clicada e não retorna o texto innerHTML*/
+    padding-left: 10px; /* sem um padding os textos grudam. não pode usar margin porque a margin pode ser clicada e não retorna o texto innerHTML*/
+    padding-right: 10px;
     flex: 1;         /* faz os elementos li ocuparem todo espaço ul, caso contrario é possivel clicar em local que não retorna o apropriado innerHTML para a função.   */
     text-align: center;  /* o innerHTML fica no centro do box li */
 }
