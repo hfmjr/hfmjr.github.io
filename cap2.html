@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios Deitel</title>
+
+    <style>
+        body {
+            font-family: Courier, Arial, sans-serif;
+            font-size: 12pt;
+            margin: 30px;
+            background-color: #f5f5dc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="linguagemc.html">Back</a>
+
+    <p>Self-Review Exercises</p>
+
+    <p>2.1 Fill-In the blanks in each of the following.</p>
+
+    <div>a) Every C program begins execution at the function "main".</div>
+
+    <div>b) Every function’s body begins with "{" and ends with "}".</div>
+    <div>c) Every statement ends with a(n) ";"</div>
+
+    <div>d) The "printf" standard library function displays information on the screen.</div>
+
+    <div>e) The escape sequence \n represents the "newline" character, which causes the cursor to position to the
+        beginning of the next line on the screen.</div>
+
+    <div>f) The "scanf" standard library function obtains data from the keyboard.</div>
+
+    <div>g) The conversion specification "%d" in a printf or scanf format control string indicates that an integer will
+        be output or input, respectively.</div>
+
+    <div>h) Whenever a new value is placed in a memory location, that value overrides the previous value in that
+        location. This process is said to be "destructive".</div>
+
+    <div>i) When a value is read from a memory location, the value in that location is preserved; this process is said
+        to be "nondestructive".</div>
+
+    <div>j)The "if" statement is used to make decisions.</div>
+
+    <p>2.2 State whether each of the following is true or false. If false, explain why.</p>
+
+    <div>a) Function printf always begins printing at the beginning of a new line.</div>
+    False, printf prints where cursor is. </div>
+
+    <div>b) Comments cause the computer to display the text after // on the screen when the program is executed.</div>
+    <div>False, comments are ignore by compiler.</div>
+
+    <div>c) The escape sequence \n in a printf format control string positions the output cursor to the beginning of the
+        next line.</div>
+    <div>True.</div>
+
+    <div>d) All variables must be defined before they’re used.</div>
+    <div>True.</div>
+
+    <div>e) All variables must be given a type when they’re defined.</div>
+    <div>True.</div>
+
+    <div>f) C considers the variables number and NuMbEr to be identical.</div>
+    <div>False, C is case sensitive.</div>
+
+    <div>g) Definitions can appear anywhere in the body of a function.</div>
+    <div>True.</div>
+
+    <div>h) All arguments following the format control string in a printf function must
+        be preceded by an ampersand ( & ).</div>
+    <div>False, it is used in scanf function.</div>
+
+    <div>i) The remainder operator ( % ) can be used only with integer operands.</div>
+    <div>True.</div>
+
+    <div>j) The arithmetic operators * , / , % , + and - all have the same precedence.</div>
+    <div>False, + and - have lower level of precedence.</div>
+
+    <div>k) A program that prints three lines of output must contain three printf s.</div>
+    <div>False. Each \n can print new line.</div>
+
+    <p>2.3 Write a single C statement to accomplish each of the following:</p>
+    <div>a)Define the variable number to be of type int and initialize it to 0.</div>
+    <div>int number = 0;</div>
+
+    <div>b) Prompt the user to enter an integer. End your prompting message with a colon ( : ) followed by a space and
+        leave the cursor positioned after the space.</div>
+    <div>printf("%s", "Enter an integer number: ");</div>
+
+    <div>c) Read an integer from the keyboard and store the value in integer variable a.</div>
+    <div>scanf("%d", &a);</div>
+
+    <div>d) If number is not equal to 7 , display "number is not equal to 7."</div>
+    <div>if(number != 7)</div>
+    <div>&nbsp&nbsp&nbspprintf("%s", number is not equal to 7");</div>
+
+    <div>e) Display "This is a C program." on one line.</div>
+    <div>printf("%s", "This is a C program.");</div>
+
+    <div>f) Display "This is a C program." on two lines so the first line ends with C.</div>
+    <div>printf("%s", "This is a C\n program.");</div>
+
+    <div>g) Display "This is a C program." with each word on a separate line.</div>
+    <div>printf("%s", "This\nis\na\nC\nprogram.");</div>
+
+    <div>h) Display "This is a C program." with the words separated by tabs.</div>
+    <div>printf("%s", "This\tis\ta\tC\tprogram.");</div>
+
+    <p>2.4 Write a statement (or comment) to accomplish each of the following:</p>
+    <div>a) State that a program will calculate the product of three integers.</div>
+    <div>// Calculate the product of three integers</div>
+    <div>b) Prompt the user to enter three integers.</div>
+    <div>printf("%s", "Enter three integers");</div>
+    <div>c) Define the variable x to be of type int and initialize it to 0.</div>
+    <div>int x = 0;</div>
+    <div>d) Define the variable y to be of type int and initialize it to 0.</div>
+    <div>int y = 0;</div>
+    <div>e) Define the variable z to be of type int and initialize it to 0.</div>
+    <div>int z = 0;</div>
+    <div>f) Read three integers from the keyboard and store them in variables x , y and z.</div>
+    <div>scanf("%d%d%d", &x, &y, &z);</div>
+    <div>g) Define the variable result , compute the product of the integers in the variables x , y and z , and use that
+        product to initialize the variable result.</div>
+    <div>int result = x * y * z;</div>
+    <div>h) Display "The product is" followed by the value of the int variable result.</div>
+    <div>printf("The product is %d\n", result);</div>
+
+    <p>2.5 Using the statements you wrote in Exercise 2.4, write a complete program that
+        calculates the product of three integers.</p>
+
+    // Calculate the product of three integers</div>
+    #include&ltstdio.io&gt
+
+    <pre>int main(void){
+   printf("%s", "Enter three integers");
+   int x = 0;
+   int y = 0;
+   int z = 0;
+   scanf("%d%d%d", &x, &y, &z);
+   printf("The product is %d\n", result);
+   int result = x * y * z;
+return 0;
+}</pre>
+
+    <p>2.6 Identify and correct the errors in each of the following statements:</p>
+    <div>a) printf("The value is %d\n", &number);</div>
+    <div>printf("The value is %d\n", number);</div>
+
+    <div>b) scanf("%d%d", &number1, number2);</div>
+    <div>scanf("%d%d", &number1, &number2);</div>
+
+    <pre>c) if (c < 7);{
+puts("C is less than 7");
+}
+if (c < 7){
+puts("C is less than 7");
+}</pre>
+
+    <pre>d) if(c => 7) {
+puts("C is greater than or equal to 7");
+}</pre>
+
+    <pre>(c >= 7){
+puts("C is greater than or equal to 7");
+}</pre>
+
+    <p>2.7 Exercises </p>
+
+    <div>Identify and correct the errors in each of the following statements. (Note: There
+        <div>may be more than one error per statement.)</div>
+
+        <div>a) scanf("d", value);</div>
+        <div>scanf("%d", &value);</div>
+
+        <div>b) printf("The product of %d and %d is %d"\n, x, y);</div>
+        <div>printf("The product of %d and %d is %d\n", x, y);</div>
+
+        <div>c) firstNumber + secondNumber = sumOfNumbers</div>
+        <div>sumOfNumbers = firstNumber + secondNumber;</div>
+
+        <pre>d) if (number => largest){
+largest == number;
+}
+if(number >= largest){
+ largest = number;
+}</pre>
+
+        <div>e) */ Program to determine the largest of three integers /*</div>
+        <div> /* Program to determine the largest of three integers */</div>
+
+        <div>f) Scanf("%d", anInteger);</div>
+        <div>scanf("%d", &anInteger);</div>
+
+        <div>g) printf("Remainder of %d divided by %d is\n", x, y, x % y);</div>
+        <div> printf("Remainder of %d divided by %d is %d\n", x, y, x % y);</div>
+
+        <pre>h) if (x = y); {
+   printf(%d is equal to %d\n", x, y);
+}
+if(x == y){
+   printf("%d is equal to %d\n", x, y);
+}</pre>
+
+        <div>i) print("The sum is %d\n," x + y);</div>
+        <div>printf("The sum is %d\n," x + y);</div>
+
+        <div>j) Printf("The value you entered is: %d\n, &value);</div>
+        <div>printf("The value you entered is: %d\n, value);</div>
+
+        <p>2.8 Fill-In the blanks in each of the following:</p>
+
+        <div>a) "Comments" are used to document a program and improve its readability.</div>
+
+        <div>b) The function used to display information on the screen is "printf".</div>
+
+        <div>c) A C statement that makes a decision is "if".</div>
+
+        <div>d) Calculations are normally performed by "assignment" statements.</div>
+
+        <div>e) The "scanf" function inputs values from the keyboard.</div>
+
+        <p><div>2.9 Write a single C statement or line that accomplishes each of the following:</div></p>
+        <div>a) Display the message “ Enter two numbers .”</div>
+        <div>puts("Enter two numbers");</div>
+
+        <div>b) Assign the product of variables b and c to variable a.</div>
+        <div>a = b * c;</div>
+
+        <div>c) State that a program performs a sample payroll calculation (i.e., use text that
+            helps to document a program).
+        </div>
+        <div>/* This program performs a payroll calculation */</div>
+
+        <div>d) Input three integer values and place them in int variables a, b and c.</div>
+        <div>scanf("%d%%d%d", &a, &b, &c);</div>
+
+        <p><div>2.10 State which of the following are true and which are false. If false, explain why.</div></p>
+        <div>a) C operators evaluate left-to-right.</div>
+        <div>true</div>
+
+        <div>b) Each of the following is a valid variable name: _under_bar_, m928134, t5, j7, her_sales,
+            his_account_total, a, b, c, z, z2.</div>
+        <div>False. We must avoid starting identifiers with an underscore (_) to prevent conflicts with
+            compiler-generated identifiers.</div>
+
+        <div>c) The statement printf("a = 5;"); is an example of an assignment statement.</div>
+        <div>False. It will print a string in the screen.</div>
+
+        <div>d) An arithmetic expression containing no parentheses evaluates left-to-right.</div>
+        <div>true</div>
+
+        <div>e) The following are all invalid variable names: 3g , 87 , 67h2 , h22 , 2h .</div>
+        <div>false, h22 is valid.</div>
+
+        <p><div>2.11 Fill-In the blanks in each of the following:</div></p>
+        <div>a) What arithmetic operations are on the same level of precedence as multiplication?</div>
+        <div>Mod and division.</div>
+
+        <div>b) When parentheses are nested, which set of parentheses is evaluated first in an arithmetic expression?
+        </div>
+        <div>The inner parentheses will be evaluated first.</div>
+
+        <div>c) A location in the computer’s memory that may contain different values at various times throughout the
+            execution of a program is called a "variable".</div>
+
+        <p><div>2.12 What, if anything, displays when each of the following statements is performed? If nothing displays,</p>
+            then answer “Nothing.” Assume x = 2 and y = 3.</div>
+        <div>a) printf("%d", x);</div>
+        <div>2</div>
+
+        <div>b) printf("%d", x + x);</div>
+        <div>4</div>
+
+        <div>c) printf("%s", "x=" );</div>
+        <div>"x="</div>
+
+        <div>d) printf("x=%d", x);</div>
+        <div>"x=2"</div>
+
+        <div>e) printf("%d = %d", x + y, y + x);</div>
+        <div>"5 = 5"</div>
+
+        <div>f) z = x + y;</div>
+        <div>Nothing</div>
+
+        <div>g) scanf("%d%d", &x, &y);</div>
+        <div>Nothing</div>
+
+        <div>h) // printf("x + y = %d", x + y);</div>
+        <div>Nothing</div>
+
+        <div>i) printf("%s", "\n");</div>
+        <div>Print empty new line.</div>
+
+        <p><div>2.13 Which of the following C statements contain variables whose values are replaced?</div></p>
+        <div>a) scanf("%d%d%d%d%d", &b, &c, &d, &e, &f);</div>
+        <div>b) p = i + j + k + 7 ;</div>
+        <div>c) printf("%s", "Values are replaced");</div>
+        <div>d) printf("%s", "a = 5");</div>
+        <div>a and b</div>
+
+        <p><div>2.14 Given the equation y = ax^3 + 7 , which of the following, if any, are correct C
+            statements for this equation?</div></p>
+        </div>
+        <div>a) y = a * x * x * x + 7;</div>
+        <div>b) y = a * x * x * (x + 7);</div>
+        <div>c) y = (a * x) * x * (x + 7);</div>
+        <div>d) y = (a * x) * x * x + 7;</div>
+        <div>e) y = a * (x * x * x) + 7;</div>
+        <div>f) y = a * x * (x * x + 7);</div>
+
+
+        <p><div>2.15 State the order of evaluation of the operators in each of the following C statements and show the
+            value of x after each statement is performed.</div></p>
+        <pre>
+a) x = 7 + 3 * 6 / 2 - 1;
+x = 7 + 18 / 2 - 1;
+x = 7 + 9 - 1;
+x = 16 -1;
+x = 15;
+
+b) x = 2 % 2 + 2 * 2 - 2 / 2;
+ x = 2 % 2 + 2 * 2 - 2 / 2;
+x = 0 + 2 * 2 - 2 / 2;
+x = 4 - 2 / 2;
+x = 4 - 1;
+x = 3;
+
+c) x = (3 * 9 * (3 + (9 * 3 / (3))));
+x = (3 * 9 * (3 + (9 * 3 / (3))));
+x = (3 * 9 * (3 + (27 / (3))));
+x = (3 * 9 * (3 + (9)));
+x = (3 * 9 * (12));
+x = 27 * 12;
+x = 324;
+</pre>
+
+        <div>2.16 (Arithmetic) Write a program that reads two integers from the user then dis-
+            plays their sum, product, difference, quotient and remainder.
+
+        </div>
+        <pre>int main(void)
+{
+    /* 2.16 (Arithmetic) Write a program that reads two integers from the user then dis-
+plays their sum, product, difference, quotient and remainder. */
+    int a = 0, b = 0;
+    printf("%s", "Input 2 integers: ");
+    scanf("%d%d", &a, &b);
+    printf("The sum: %d\n", a + b);
+    printf("The product: %d\n", a * b);
+    printf("The difference: %d\n", a - b);
+    printf("The quotient: %d\n", a / b);
+    printf("The remainder: %d\n", a % b);
+
+    
+    return 0;
+}
+</pre>
+
+        <div>2.17 (Displaying Values with printf ) Write a program that displays the numbers 1
+            to 4 on the same line. Write the program using the following methods.
+        </div>
+        <div>a) Using one printf statement with no conversion specifications.</div>
+        <div>b) Using one printf statement with four conversion specifications.</div>
+        <div>c) Using four printf statements.</div>
+
+        <pre>int main(int argc, char const *argv[])
+{
+    printf("%s", "1 2 3 4\n");
+    
+    printf("%d %d %d %d\n", 1, 2, 3, 4);
+    
+    printf("%d ", 1);
+    printf("%d ", 2);
+    printf("%d ", 3);
+    printf("%d ", 4);
+
+    return 0;
+}</pre>
+
+        <div>2.18 (Comparing Integers) Write a program that reads two integers from the user
+            then displays the larger number followed by the words “ is larger .” If the numbers
+            are equal, display the message “ These numbers are equal .” Use only the single-selec-
+            tion form of the if statement you learned in this chapter.
+        </div>
+
+        <pre>int main(int argc, char const *argv[])
+{
+    int a = 0, b = 0;
+    printf("%s", "Input 2 integers: ");
+
+   scanf("%d%d", &a, &b);
+
+   if(a == b){
+   puts("These numbers are equal.");   
+   }
+   
+   if(a > b){
+   printf("%d is larger.\n", a);   
+   }
+
+   if(a < b){
+   printf("%d is larger.\n", b);
+   }
+    
+    return 0;
+}
+</pre>
+
+        <div>2.19 Write a program that inputs three different integers from the keyboard, then displays the sum, the
+            average, the
+            product, the smallest and the largest of these numbers. Use only the single-selection
+            form of the if statement you learned in this chapter. The screen dialogue should appear as follows:
+        </div>
+        <pre>
+Enter three different integers: 13 27 14
+Sum is 54
+Average is 18
+Product is 4914
+Smallest is 13
+Largest is 27 
+
+int main(void)
+{
+    int a = 0, b = 0, c = 0;
+    int smalest = 0, largest = 0;
+    printf("%s", "Enter three different integers: ");
+    scanf("%d%d%d", &a, &b, &c);
+
+    printf("\nThe sum is %d.\n", a + b + c);
+    printf("The average is %d.\n", (a + b + c)/3);
+    printf("The product is %d.\n", (a * b * c));
+    
+
+    smalest = a;
+    if(smalest > b)
+        smalest = b;    
+     
+    if(smalest > c)
+        smalest = c;
+    
+    printf("The smalest is %d\n", smalest);
+
+    largest = a;
+    if(largest < b)
+        largest = b;    
+     
+    if(largest < c)
+        largest = c;
+    
+    printf("The largest is %d\n", largest);
+      
+    return 0;
+}
+</pre>
+
+        <div>2.20 (Circle Area, Diameter and Circumference) For a circle of radius 2, display the
+            diameter, circumference and area. Use the value 3.14159 for π . Use the following for-
+            mulas (r is the radius): diameter = 2r, circumference = 2 π r and area = π r 2 . Perform each
+            of these calculations inside the printf statement(s) and use the conversion specifica-
+            tion %f . This chapter discussed only integer constants and variables. Chapter 3 will
+            discuss floating-point numbers—that is, values that can have decimal points.
+        </div>
+
+        <pre>int main(void)
+{
+    float pi = 3.14159;
+    float circle_radius = 2;
+  
+    printf("\nDiameter: %.2f\n", (2 * circle_radius));
+    printf("Circumference: %.2f\n", 2 * pi * circle_radius);
+    printf("Area: %.2f\n", 2 * pi * (circle_radius * circle_radius));
+    
+    return 0;
+}</pre>
+
+        <div>2.22 (Odd or Even) Write a program that reads an integer and determines and dis-
+            plays whether it’s odd or even. Use the remainder operator. An even number is a mul-
+            tiple of two. Any multiple of two leaves a remainder of zero when divided by 2.
+        </div>
+
+        <pre>int main(void)
+{
+    int number;
+    puts("Insert a number");
+    scanf("%d", &number);
+
+    if(number % 2 == 0){
+        printf("Number %d is even.\n", number);
+        return 0;
+    }
+
+    printf("Number %d is odd.\n", number);
+
+    return 0;
+}
+</pre>
+
+        <div>2.23 (Multiples) Write a program that reads two integers and determines and dis-
+            plays whether the first is a multiple of the second. Use the remainder operator.
+        </div>
+
+        <pre>int main(void)
+{
+    int number1;
+    int number2;
+    puts("Insert 2 numbers");
+    scanf("%d%d", &number1, &number2);
+
+    if(number1 % number2 == 0){
+        printf("Number %d is multiple of %d.\n", number1, number2);
+        return 0;
+    }
+  
+
+    return 0;
+}
+</pre>
+
+        <div>2.24 Distinguish between the terms fatal error and nonfatal error. Why might you
+            prefer to experience a fatal error rather than a nonfatal error?
+        </div>
+        <div>A fatal error that causes the program to terminate immediately without successfully performing its job.
+            Nonfatal errors allow programs to run to completion, often producing incorrect results.</div>
+
+     <p>   <div>2.25 (Integer Value of a Character) Here’s a peek ahead. In this chapter, you learned
+            about integers and the type int . C can also represent uppercase letters, lowercase let-
+            ters and a considerable variety of special symbols. C uses small integers internally to
+            represent each different character. The set of characters a computer uses together with
+            the corresponding integer representations for those characters is called that comput-
+            er’s character set. You can display the integer equivalent of uppercase A , for example,
+            by executing the statement
+            printf("%d", 'A');
+            Write a C program that displays the integer equivalents of some uppercase letters,
+            lowercase letters, digits and special symbols. At a minimum, determine the integer
+            equivalents of the following: A B C a b c 0 1 2 $ * + / and the space character.
+        </div></p>
+
+        <pre>int main(int argc, char const *argv[])
+{
+    printf("%d\n", 'A');
+    printf("%d\n", 'C');
+    printf("%d\n", 'a');
+    printf("%d\n", '0');
+    printf("%d\n", '1');
+    printf("%d\n", '2');
+    printf("%d\n", '$');
+    printf("%d\n", '=');
+    printf("%d\n", '/');
+    printf("%d\n", ' ');
+    return 0;
+}
+</pre>
+
+        <div>2.26 (Separating Digits in an Integer) Write a program that inputs one five-digit
+            number, separates the number into its individual digits and displays the digits sepa-
+            rated from one another by three spaces each. [Hint: Use combinations of integer di-
+            vision and the remainder operation.] For example, if the user types in 42139, the
+            program should display 4 2 1 3 9
+        </div>
+
+        <pre>int main(int argc, char const *argv[])
+{
+    int num = 42139;
+
+    int dig5 = num / 10000;
+
+    int prox4 = num % 10000;
+    int dig4 = prox4 / 1000;
+
+    int prox3 = prox4 % 1000;
+    int dig3 = prox3 / 100;
+
+    int prox2 = prox3 % 100;
+    int dig2 = prox2 / 10;
+
+    int prox1 = prox2 % 10;
+    int dig1 = prox1 / 1;
+
+    printf( "%d   %d   %d   %d   %d\n", dig5, dig4, dig3, dig2, dig1);
+
+    return 0;
+}</pre>
+
+        <div>2.27 (Table of Squares and Cubes) Using only the techniques you learned in this
+            chapter, write a program that calculates the squares and cubes of the numbers from 0
+            to 10 and uses tabs to display the following table of values:
+        </div>
+
+        <pre>int main() {
+
+  printf("number\tsquare\tcube\n");
+  printf("%d\t%d\t%d\n", 0, 0 * 0, 0 * 0 * 0 );
+  printf("%d\t%d\t%d\n", 1, 1 * 1, 1 * 1 * 1 );
+  printf("%d\t%d\t%d\n", 2, 2 * 2, 2 * 2 * 2 );
+  printf("%d\t%d\t%d\n", 3, 3 * 3, 3 * 3 * 3 );
+  printf("%d\t%d\t%d\n", 4, 4 * 4, 4 * 4 * 4 );
+  printf("%d\t%d\t%d\n", 5, 5 * 5, 5 * 5 * 5 );
+  printf("%d\t%d\t%d\n", 6, 6 * 6, 6 * 6 * 6 );
+  printf("%d\t%d\t%d\n", 7, 7 * 7, 7 * 7 * 7 );
+  printf("%d\t%d\t%d\n", 8, 8 * 8, 8 * 8 * 8 );
+  printf("%d\t%d\t%d\n", 9, 9 * 9, 9 * 9 * 9 );
+  printf("%d\t%d\t%d\n", 10, 10 * 10, 10 * 10 * 10 );
+
+  return 0;
+}</pre>
+
+        <div>2.28 (Target Heart-Rate Calculator) While exercising, you can use a heart-rate
+            monitor to see that your heart rate stays within a safe range suggested by your doctors
+            and trainers. According to the American Heart Association (AHA) ( http://bit.ly/
+            AHATargetHeartRates ), the formula for calculating your maximum heart rate in beats
+            per minute is 220 minus your age in years. Your target heart rate is 50–85% of your
+            maximum heart rate. Write a program that prompts for and inputs the user’s age and
+            calculates and displays the user’s maximum heart rate and the range of the user’s tar-
+            get heart rate. [These formulas are estimates provided by the AHA; maximum and84
+            Chapter 2 Intro to C Programming
+            target heart rates may vary based on the health, fitness and gender of the individual.
+            Always consult a physician or qualified healthcare professional before beginning or
+            modifying an exercise program.]
+        </div>
+        <pre>
+int main(void)
+{
+    
+    puts("Insert your age: ");
+    int age = 0;
+    scanf("%d", &age);
+    int max_heart_rate = 220 - age;
+    printf("Your max heart rate is %d\n", max_heart_rate);
+    printf("Your range target heart rate is betweenn %.2f and %.2f.\n", (float)max_heart_rate * 0.5, (float)max_heart_rate * 0.85);
+
+    return 0;
+}
+</pre>
+
+
+
+
+
+</body>
+
+</html>
