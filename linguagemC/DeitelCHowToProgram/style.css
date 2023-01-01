@@ -1,0 +1,10 @@
+body {
+    font-family: Courier;
+    font-size: 12pt;
+    margin: 30px;
+    background-color: #f5f5dc;
+}
+
+pre {
+    font-family: Courier;
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Capítulo 3</title>
+
+      <link rel="stylesheet" href="style.css">
+
+
+   </head>
+   <body>
+      <a href="/linguagemC/linguagemc.html">Back</a>      
+      <pre>
+3.1 Fill-In the blanks in each of the following questions.
+
+a) A procedure for solving a problem in terms of the actions to execute and the 
+order in which the actions should execute is called a(n) "algorithm"
+
+b) Specifying the execution order of statements by the computer is called "program control".
+
+c) All programs can be written in terms of three types of control statements: sequence,
+selection, and iteration.
+
+d) The "if...else" selection statement is used to execute one action when a condition 
+is true and another action when that condition is false.
+
+e) Several statements grouped together in braces ( { and } ) are called a(n) "block or
+compound statement".
+
+f) The "while" iteration statement specifies that a statement or group of statements is
+to be executed repeatedly while some condition remains true.
+
+g) Iterating a specific number of times is called "definite".
+
+h) When it’s not known in advance how many times a set of statements will be repeated, 
+a "sentinel" value can be used to terminate the iteration. 
+
+3.2 Write four different C statements that each add 1 to integer variable x.
+x = x + 1;
+x += 1;
+++x;
+x++;
+
+3.3 Write a single C statement to accomplish each of the following:
+a) Multiply the variable product by 2 using the *= operator.
+b) Multiply the variable product by 2 using the = and * operators.
+c) Test whether the value of the variable count is greater than 10. If it is, print
+"Count is greater than 10" .
+d) Calculate the remainder after quotient is divided by divisor and assign the
+result to quotient . Write this statement two different ways.
+e) Print the value 123.4567 with two digits of precision. What value is printed?
+f) Print the floating-point value 3.14159 with three digits to the right of the
+decimal point. What value is printed?
+
+a) product *= 2;
+b) product = product * 2;
+c) if(count > 10){
+   puts("Count is greater than 10");
+}
+d)quotient = quotient % divisor;
+   quotient %= divisor;   
+e) printf("Value is %.2f", 123.4567); - printed 123.46
+f) printf("Value is %.3f", 3.14159); - printed 3.142
+
+3.4
+Write a C statement to accomplish each of the following tasks.
+a) Define variable x to be of type int and set it to 1 .
+b) Define variable sum to be of type int and set it to 0 .
+c) Add variable x to variable sum and assign the result to variable sum .
+d) Print "The sum is: " followed by the value of variable sum .
+
+int x = 1;
+int sum = 0;
+sum += x;
+printf("The sum is: %d", sum);
+
+3.5 Combine the statements from Exercise 3.4 into a program that calculates the
+sum of the integers from 1 to 10. Use the while statement to loop through the 
+calculation and increment statements. The loop should terminate when x becomes 11.
+
+int x = 1;
+int sum = 0;
+while(x <=10 ){
+   sum += x;
+   x++;
+}
+printf("The sum is: %d", sum);
+
+3.6 Write single C statements to perform each of the following tasks:
+a) Input integer variable x with scanf . Use the conversion specification %d .
+b) Input integer variable y with scanf . Use the conversion specification %d .
+c) Set integer variable i to 1 .
+d) Set integer variable power to 1 .
+e) Multiply integer variable power by x and assign the result to power .
+f) Increment variable i by 1 .
+g) Test i to see if it’s less than or equal to y in the condition of a while statement.
+h) Output integer variable power with printf .
+
+a) scanf("%d", &x);
+b) scanf("%d", &y);
+c) int i = 1;
+d) int power = 1;
+e) power *= x;
+f) i++;
+g) while ( i <= y){}
+h)printf("Output of power variable is %d", power);
+
+3.7 Write a C program that uses the statements in the preceding exercise to calculate
+x raised to the y power. The program should have a while iteration control statement.
+#include <stdio.h>
+
+int main(int argc, char const *argv[])
+{
+      
+      puts("Insira o valor de X");
+      int x = 0;
+      scanf("%d", &x);
+      puts("Insira o valor de y");
+      int y = 0;
+      scanf("%d", &y);
+      
+      int i = 1, power = 1;
+      while (i <= y)
+      {
+         power *= x;
+         i++;
+      }
+
+      printf("Valor de power eh %d\n", power);
+      return 0;
+}
+
+3.8 Identify and correct the errors in each of the following:
+a) while (c <= 5) {
+   product *= c;
+   ++c;
+Missing curly brace at end of block while.
+   
+b) scanf("%.4f", &value);
+Format %.4 is for display. Should be just %f
+
+c) if (gender == 1) {
+   puts("Woman");
+}
+else; {
+puts("Man");
+}
+
+Sintax error, semicolon after else.
+
+3.9 What’s wrong with the following while iteration statement (assume z has value
+100), which is supposed to calculate the sum of the integers from 100 down to 1?
+while (z >= 0) {
+   sum += z;
+}
+Missing z-- to avoid infinite loop.
+
+Exercises
+3.10 Identify and correct the errors in each of the following. [Note: There may be
+more than one error in each piece of code.]
+a) if (age >= 65); {
+   puts("Age is greater than or equal to 65");
+}
+else {
+   puts("Age is less than 65");
+}
+Semicolon after parenthesis
+
+
+b) int x = 1;
+   int total;
+while (x <= 10) {
+   total += x;
+++x;
+}
+Total ao não ser inicializado vai conter sujeira.
+
+c)
+While (x <= 100)
+total += x;
+++x;
+Faltando abrir e fechar o bloco com as chaves {}
+E o C é case sensitive, então não pode W maiúsculo.
+
+d) while(y > 0) {
+   printf("%d\n", y);
+   ++y;
+}
+
+O laço é infinito, pois continuará com y > 0 e o y será incrementado.
+
+
+3.11 Fill-In the blanks in each of the following:
+a) The solution to any problem involves performing a series of actions in a specific "order".
+
+b) A synonym for procedure is "algorithm".
+
+c) A variable that accumulates the sum of several numbers is a(n) "total"
+
+d) A special value used to indicate “end of data entry” is called a(n) "sentinel", a(n) flag
+or a(n) dummy value.
+
+e) A(n) "flowchart" is a graphical representation of an algorithm.
+f) In a flowchart, the order in which the steps should be performed is indicated by "Flowlines"
+symbols.
+
+g) Rectangle symbols correspond to calculations that are normally performed by assignment 
+statements and input/output operations that are normally performed by calls to the printf
+and scanf Standard Library functions.
+
+h) The item written inside a decision symbol is called a "condition."
+
+3.12 What does the following program print?
+
+#include <stdio.h>
+   int main(void) {
+   int x = 1;
+   int total = 0;
+   while (x <= 10) {
+      int y = x * x;
+      printf("%d\n", y);
+      total += y;
+      ++x;
+   } // end while
+   printf("Total is %d\n", total);
+} // end main
+      
+      <pre>
+      
+   </body>
+</html>
