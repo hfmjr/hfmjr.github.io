@@ -226,9 +226,222 @@ h) The item written inside a decision symbol is called a "condition."
       ++x;
    } // end while
    printf("Total is %d\n", total);
-} // end main
+} // end main      
+<pre>
+
+<p>3.13 Write a single pseudocode statement that indicates each of the following:</p>
+<div>a) Display the message "Enter two numbers" .
+b) Assign the sum of variables x , y , and z to variable p .
+c) Test the following condition in an if … else selection statement: The cur-
+rent value of variable m is greater than twice the current value of variable v .
+d) Obtain values for variables s , r , and t from the keyboard.
+</div>
+
+<div>a- Imprima "Enter two number"</div>
+<div>b- Ponha a soma de x, y e z na variavel p ou p <- x + y + z</div>
+<div>c- se m for maior do que o dobro de v faça isso, senão faça aquilo
+   <pre>
+      if m > 2 * v:
+         # do something
+      else:
+         # do something else
+   </pre>
+</div>
+<div>d- insira o valor de s, r e t.</div>
+
+<p>3.14 Formulate a pseudocode algorithm for each of the following:</p>
+<div>a) Obtain two numbers from the keyboard, compute their sum and display the
+result.
+b) Obtain two numbers from the keyboard, and determine and display which
+(if either) of the two numbers is the larger.
+c) Obtain a series of positive numbers from the keyboard, and determine and
+display their sum. Assume that the user types the sentinel value -1 to indi-
+cate “end of data entry.”</div>
+
+<div>a- 
+   <pre>
+1. Prompt the user to enter the first number
+2. Read the first number from the keyboard and store it in a variable num1
+3. Prompt the user to enter the second number
+4. Read the second number from the keyboard and store it in a variable num2
+5. Calculate the sum of num1 and num2 and store it in a variable sum
+6. Display the value of sum
+   </pre>
+</div>
+<div>b- 
+   <pre>
+1. Prompt the user to enter the first number
+2. Read the first number from the keyboard and store it in a variable num1
+3. Prompt the user to enter the second number
+4. Read the second number from the keyboard and store it in a variable num2
+5. If num1 is greater than num2:
+   6. Display "num1 is larger than num2"
+   7. Go to step 8
+6. If num1 is equal to num2:
+   7. Display "num1 is equal to num2"
+   8. Go to step 8
+7. If num1 is less than num2:
+   8. Display "num2 is larger than num1"
+8. End
+   </pre>
+</div>
+<div>c- 
+   <pre>
+1. Initialize a variable sum to 0
+2. Prompt the user to enter a number
+3. Read the number from the keyboard and store it in a variable num
+4. If num is equal to -1:
+   5. Go to step 9
+5. If num is greater than or equal to 0:
+   6. Add num to sum
+   7. Go to step 2
+6. If num is less than 0:
+   7. Display an error message
+   8. Go to step 2
+9. Display the value of sum
+10. End
+   </pre>
+</div>
+<p>3.15 State which of the following are true and which are false. If a statement is false,
+explain why.</p>
+<div>
+a) Experience has shown that the most challenging part of solving a problem
+on a computer is producing a working C program.
+False, the most challenging is producing the algorithm.
+b) A sentinel value must be a value that cannot be confused with a legitimate
+data value.
+True
+c) Flowlines indicate the actions to be performed.
+False, flowlines indicates the order in which the actions are performed.
+d) Conditions written inside decision symbols always contain arithmetic oper
+ators (i.e., + , - , * , / , and % ).
+False, must contain any bollean value, 0 is false, anything else is true.
+e) In top-down, stepwise refinement, each refinement is a complete represen-
+tation of the algorithm.
+False, each refinement is a more explicit apresentation of the algorithm.
+</div>
       
-      <pre>
-      
-   </body>
+<p>For Exercises 3.16–3.20, perform each of these steps:</p>
+<div>1. Read the problem statement.
+2. Formulate the algorithm using pseudocode and top-down, stepwise refinement.
+3. Write a C program.
+4. Test, debug and execute the C program.
+3.16 (Gas Mileage) Drivers are concerned with the mileage obtained by their auto-
+mobiles. One driver has kept track of several tankfuls of gasoline by recording miles
+driven and gallons used for each tankful. Develop a program that uses scanf to input
+the miles driven and gallons used for each tankful. The program should calculate and
+display the miles per gallon obtained for each tankful. After processing all input in-
+formation, the program should calculate and print the combined miles per gallon ob-
+tained for all tankfuls. Here is a sample input/output dialog:
+</div>
+<div>Enter the gallons used (-1 to end): 12.8
+Enter the miles driven: 287
+The miles/gallon for this tank was 22.421875
+Enter the gallons used (-1 to end): 10.3
+Enter the miles driven: 200
+The miles/gallon for this tank was 19.417475
+Enter the gallons used (-1 to end): 5
+Enter the miles driven: 120
+The miles/gallon for this tank was 24.000000
+Enter the gallons used (-1 to end): -1
+The overall average miles/gallon was 21.601423</div>
+
+<div>Resposta</div>
+<div>1. Read the problem statement.
+   Variaveis: milesDriven, gallons, milesPerGallon.
+   input: milesDriven, gallons.   
+   process inputs
+   output: milesPerGallon   
+   calculate and print averageMilesPerGallon.
+   output: averageMilesPerGallon  = acumulado de milesPer / total de tanques 
+</div>
+
+<div>
+2. Formulate the algorithm using pseudocode and top-down, stepwise refinement.
+   
+   1.declarações
+      declara a variavel milesPerGallon do tipo double.
+      declara a variavel averageMilesPerGallon do tipo double.
+      declara variavel acumulador do tipo double.
+      declara variavel contador do tipo int.
+      declara variavel gallons do tipo int.
+   2.Entra laço com condição verdade de gallons diferente de -1.
+   3.Peça ao usuario para informar gallons e milesDriven
+   4.Leia numero de gallons e armazene na variavel gallons
+   5.Se gallons é igual a -1 
+      5.1.(encerra laço) vai para 8
+   6.Se gallons é menor do que zero
+      6.1 Apresente mensagem de erro e retorne a 0.9
+   7.Se gallons é maior ou igual a zero
+      7.1 Leia numero de milesDriven e armazene na variavel milesDriven   
+      7.2 Calcule milesDriven/gallons e armazene na variavel milesPerGallon
+      7.3 Apresentar valore de miles per tank .
+      7.4 Acumular milesPerGallon na variavel acumulador
+      7.5 Adicionar 1 a variavel contador.
+      7.6 Retorne para 0.9 enquanto não for encerrado -1.
+   8. Calcular averageMilesPerGallon dividindo acumulador por contador;
+   9. Se averageMilpesPerGallon for maior que zero
+      9.1 Apresentar o resultado de 7.
+      9.2 Senão avisar que os dados não foram informados.
+   10. Encerrar o programa.
+</div>
+
+<div>
+3. Write a C program.
+4. Test, debug and execute the C program.
+
+#include <stdio.h>
+
+   int main(void)
+   {
+       int gallons = 0,
+           contador = 0;
+   
+       double averageMilesPerGallon = 0,
+              milesPerGallon = 0,
+              acumulador = 0;
+   
+       while (gallons != -1)
+       {
+           puts("\nInforme quantidade em gallons e quantidade em milhas percorridas:");
+           scanf("%d", &gallons);
+           if (gallons == -1)
+           {
+               break;
+           }
+           else if (gallons <= 0)
+           {
+               continue;
+           }
+           else
+           {
+               int milesDriven = 0;
+               scanf("%d", &milesDriven);
+               if (milesDriven > 0)
+               {
+                   milesPerGallon = (double)milesDriven / gallons;
+               }
+               printf("Este tanque apresentou %.2f miles per gallon.\n", milesPerGallon);
+               acumulador += milesPerGallon;
+               contador++;
+           }
+       }
+   
+       averageMilesPerGallon = acumulador / contador;
+       if (averageMilesPerGallon > 0)
+       {
+           printf("No geral a média de miles per gallon foi %.2f.\n", averageMilesPerGallon);
+       }
+       else
+       {
+           puts("Não foram inseridos dados para cálculo.");
+       }
+   
+       return 0;
+   }
+</div>
+
+
+
+</body>
 </html>
