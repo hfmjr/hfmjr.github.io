@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações de curso de frontend</title>
+</head>
+<body>
+
+    
+<h1>Anotações de curso de frontend - Frontend Web Development Bootcamp Course (JavaScript, HTML, CSS).
+        https://youtu.be/zJSY8tbf_ys        
+</h1>
+
+<div>--Vou anotar aqui apenas assuntos que merecem destaque e lembrança.</div>
+
+<div>--Primeira hora apenas relembrei coisas que eu já sabia.</div>
+
+<div>--Na segunda hora encontrei isso: https://github.com/getify/You-Dont-Know-JS</div>
+
+<div>--Existem guias de estilo para javascript como o do google e do airbnb. "google javascript style guide".
+    É importante seguir um critério para nomes. Aí só pelo nome vai identificar se é uma classe, uma 
+    variável local, uma variável global, uma constante. Por exemplo:
+    contante PI, variável kilometrosPorHora, classe Pessoas.
+
+<div>--Na terceira hora relembrei que objetos não podem ser comparados. 
+    Dois objetos com conteúdos iguais são ponteiros para diferentes áreas
+    da memória.
+    Então como comparar objetos? Tem a biblioteca lodash.
+</div>
+
+<div>--Codewars - bom site para praticar.</div>
+
+<div>--Sobre funções.
+    Normalmente temos que declarar a função:
+
+    function meuNome(){
+        console.log("Junior";
+    }
+
+    E depois invocar a função para que ela execute.
+
+    meuNome();
+
+    Mas podemos fazer uma função que ao declará-la e defini-la já pode
+    executar.
+
+    Basta colocar parenteses nela:
+    (function meuNome(){
+        console.log("Junior";
+    })();
+
+    Assim ela vai ser declarada, definida e invocada.
+    É o que se chama de immediately invoked function.
+</div>
+
+<div>--Sobre callbacks, é uma função que é passada como argumento
+para outra função. Geralmente é utilizada em programação baseada 
+eventos. A função principal fica aguardando um evento, então chama
+uma função.
+
+Nas primeiras vezes que vi uma callback eu pensava na necesidade de 
+passar uma função como argumento para outra. Nos meus casos concretos, 
+bastava uma função chamar a outra. Acontece que fazendo assim a função se torna
+menos dinâmica. Com callback é possível chamar diversas funções.
+
+E também é possível em vez de passar uma função definida previamente, é 
+possível passar uma função anônima definida no parâmetro da função principal.
+
+Então podemos ter para map:
+
+<pre>
+    array.map(nomeDaFunçãoCallbal);
+    ou
+    arry.map((item) => item * 2);
+</pre>
+</div>
+<div>--No primeiro caso uma função já definida é passada para o método map como callback.
+No segundo caso passamos uma função anônima que é expressa no próprio campo dos argumentos.    
+</div>
+
+<div>--Algo que foi dito antes no video mas que agora ficou mais claro e merece ser
+lembrado é que == podemos interpretar como comparação entre dois elementos com mesmo valor.
+Já === é a comparação entre dois elementos que possuem o mesmo valor e o mesmo tipo.
+</div>
+<div>Javascript possui 6 primitives: boolean, number, bigint, string, undefined and symbol.</div>
+
+<div>Existe um grande problema com o formato de data do javascript. É interessante notar
+    que existe um padrão iso.
+    myDate.toISOString();
+    ISO 8601.
+</div>
+
+<div>
+In JavaScript, the Date() function returns a string representation of the current date and time. The string is formatted according to the ISO 8601 standard, which is a standardized format for representing date and time information.
+
+The ISO 8601 format for a date and time string is YYYY-MM-DDTHH:mm:ss.sssZ, where:
+
+    <pre>YYYY is the four-digit year.
+    MM is the two-digit month (01-12).
+    DD is the two-digit day of the month (01-31).
+    T is the date-time separator.
+    HH is the two-digit hour (00-23).
+    mm is the two-digit minute (00-59).
+    ss is the two-digit second (00-59).
+    sss is the three-digit millisecond (000-999).
+    Z is the time zone offset.</pre>
+</div>
+<div>Here's an example of how you might use the Date() function in JavaScript:
+
+let now = new Date();
+console.log(now.toISOString());  // Outputs the current date and time in ISO 8601 format
+</div>
+
+
+    
+</body>
+</html>
